@@ -52,10 +52,11 @@ PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
 In this case, cropped image size is 300px x 300px.  
 
 4.run by ``` python annotation.py```  
-pushing keys below.  
+pushing keys below. 
+
   C   -- count object (moving your mouse on top of object first)  
-  E   -- stop annotationg  
-  B   -- go back ONLY ONE act  
+  E   -- stop annotating. **DO NOT END IT BY TYPING 'Ctrl + C' OR ANY OTHER WAYS!!**  
+  B   -- go back **JUST ONE** act  
  Esc  -- clear image and start it again  
 Enter -- go to next image  
 
