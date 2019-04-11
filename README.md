@@ -32,6 +32,14 @@ folder = "images" #input images in this directory
 
 PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
 ``` 
+3. You can also change the size of cropped images here.  
+``` 
+	while y < img.shape[0]/300.0:
+		while x < img.shape[1]/300.0:
+							
+			cropped = img[(y-1)*300:y*300, (x-1)*300:x*300]
+``` 
+In this case, cropped images' size is 300px x 300px.  
 
 ## Output
 You can get both csv file and annotated images.  
