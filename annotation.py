@@ -82,8 +82,8 @@ for fname in files:
 		df.to_csv(csvpath)
 		ent = 1
 	
-	while y < img.shape[0]/300.0:
-		while x < img.shape[1]/300.0:
+	while y < img.shape[0]/300.0 + 1:
+		while x < img.shape[1]/300.0 + 1:
 							
 			cropped = img[(y-1)*300:y*300, (x-1)*300:x*300]
 			cv2.imwrite(os.path.join(path, os.path.basename(fname) + "_" + str(x) + "_" + str(y) + ".jpg"), cropped)
