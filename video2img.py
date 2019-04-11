@@ -23,7 +23,7 @@ def save_frame_range(video_path, start_frame, stop_frame, step_frame,
             n += 1
         else:
             return
-
-save_frame_range('./videos/pocari_cm.mp4',
+          
+save_frame_range('./videos/pocari_cm.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
-                 './images/', 'pocari_cm')
+                 './images/', 'pocari_cm') #output directory and output images' prefix
