@@ -20,6 +20,7 @@ pip install -r requirements.txt
 ### making videos to images
 1. Go to the root directory.  
 2. setting path and frame of video2img.py  
+Most of this script is owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
 ``` 
 save_frame_range('./videos/pocari_cm.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
