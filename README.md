@@ -61,4 +61,4 @@ pushing keys below.
 Enter -- go to next image  
 
 ## Output
-You can get both csv file and annotated images as I showed on the top of this page.  
+You can get both csv file and annotated images as shown on the top of this page.  
