@@ -31,6 +31,7 @@ save_frame_range('./videos/pocari_cm.mp4', #input video
 
 ### annotation
 1. Go to the root directory.  
+
 2. setting path of annotation.py
 ``` 
 folder = "images" #input images in this directory
@@ -45,6 +46,14 @@ PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
 			cropped = img[(y-1)*300:y*300, (x-1)*300:x*300]
 ``` 
 In this case, cropped images' size is 300px x 300px.  
+
+4.run by ``` python annotation.py```  
+pushing keys below.  
+  C   -- count person  
+  E   -- stop annotationg  
+  B   -- go back ONLY ONE act  
+ Esc  -- clear image and start it again  
+Enter -- go to next image  
 
 ## Output
 You can get both csv file and annotated images.  
