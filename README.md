@@ -1,7 +1,7 @@
 # Count-Annotator
 
 You can prepare annotation images for counting and csv file which contains each point's location.  
-This can be worked both on both Linux and Windows.  
+This can be worked on both Linux and Windows.  
 
 <img src="https://user-images.githubusercontent.com/44015510/55922933-524cbf80-5c3e-11e9-9c02-d4d5d7196183.png" width="300"><img src="https://user-images.githubusercontent.com/44015510/55923063-dc952380-5c3e-11e9-8c8b-8e0b6913d3a5.png" width="300">
 
@@ -21,9 +21,9 @@ pip install -r requirements.txt
 1. Go to the root directory.  
 2. setting path and frame of video2img.py  
 ``` 
-save_frame_range('./videos/pocari_cm.mp4',
+save_frame_range('./videos/pocari_cm.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
-                 './images/', 'pocari_cm')
+                 './images/', 'pocari_cm') #output directory and output images' prefix
 ``` 
 
 ### annotation
