@@ -2,6 +2,8 @@
 
 You can prepare annotation images for counting and csv file which contains each point's location.  
 This can be worked on both Linux and Windows.  
+<img src="https://user-images.githubusercontent.com/44015510/55924149-97272500-5c43-11e9-95bf-96e7de80151a.png" width="600">
+
 
 <img src="https://user-images.githubusercontent.com/44015510/55922933-524cbf80-5c3e-11e9-9c02-d4d5d7196183.png" width="300"><img src="https://user-images.githubusercontent.com/44015510/55923063-dc952380-5c3e-11e9-8c8b-8e0b6913d3a5.png" width="300">
 
