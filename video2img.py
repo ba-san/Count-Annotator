@@ -27,3 +27,14 @@ def save_frame_range(video_path, start_frame, stop_frame, step_frame,
 save_frame_range('./videos/pocari_cm.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
                  './images/', 'pocari_cm') #output directory and output images' prefix
+
+# process multiple videos
+# files=glob.glob("/PATH/TO/VIDEO/FOLDER" + "/*")
+
+# for fname in files:
+# 	vname = os.path.basename(fname)
+#	  prefix = vname.split(".")
+# 	print(vname)
+# 	save_frame_range('/PATH/TO/VIDEO/FOLDER' + '/' + vname,
+# 	0, 1000000000000, 30,
+# 	'./' + foldername + '_image/', prefix[0])
