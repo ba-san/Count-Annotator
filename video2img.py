@@ -2,6 +2,7 @@
 
 import os
 import cv2
+import glob
 
 def save_frame_range(video_path, start_frame, stop_frame, step_frame,
                      dir_path, basename, ext='jpg'):
@@ -23,7 +24,22 @@ def save_frame_range(video_path, start_frame, stop_frame, step_frame,
             n += 1
         else:
             return
+            
+videoname = 'C0006'
+foldername = 'flucture'
 
-save_frame_range('./videos/pocari_cm.mp4',
-                 0, 10000000000, 100, # start, end, frame
-                 './images/', 'pocari_cm')
+#save_frame_range('./survey/' + foldername + '/' + videoname + '.MP4',
+#                 0, 1000000000000, 30,
+#                 './' + foldername + '_image/', videoname)
+
+
+# process multiple videos
+files=glob.glob("/home/daisuke/Workplace/AIST/survey/" + foldername + "/*")
+
+for fname in files:
+	vname = os.path.basename(fname)
+	prefix = vname.split(".")
+	print(vname)
+	save_frame_range('./survey/' + foldername + '/' + vname,
+	0, 1000000000000, 30,
+	'./' + foldername + '_image/', prefix[0])

@@ -15,7 +15,7 @@ files=glob.glob(PWD + folder + "/*")
 
 path = PWD + folder + "_cropped"
 
-s = 0
+s = 0 #  1 is new, 0 is resume
 k = 0
 cnt = 0
 pcnt = 1
