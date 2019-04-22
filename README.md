@@ -1,4 +1,5 @@
 # Count-Annotator
+**Note**: This repository has a successor [Count-Annotator2](https://github.com/ba-san/Count-Annotator2).  
 
 You can prepare annotated images for object counting and csv file which contains each point's location.  
 This can be worked on both Linux and Windows.  
