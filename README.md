@@ -20,13 +20,13 @@ pip install -r requirements.txt
 ``` 
 
 ## How to use
-### making videos to images
-If you won't use video as input, you can skip here.  
-Most of the scripts in this section are owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
+### converting videos to images
+If you won't use video as input, you can skip this section.  
+Most of the scripts for this section are owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
 
 1. Go to the "Count-Annotator" directory.  
 
-2. setting path and frame of video2img.py  
+2. setting path and frames in video2img.py  
 (you can use default setting for demo. the demo video is gotten from [this page](https://www.pexels.com/video/people-walking-in-the-park-in-timelapse-mode-1625972/))  
 
 ``` 
