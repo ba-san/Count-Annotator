@@ -9,7 +9,7 @@ import linecache, shutil
 
 folder = "images" #input images in this directory
 
-PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
+PWD = os.getcwd() + '/'
 
 files=glob.glob(PWD + folder + "/*")
 
