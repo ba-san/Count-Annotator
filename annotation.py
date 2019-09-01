@@ -13,17 +13,18 @@ files=glob.glob(PWD + folder + "/*")
 path = PWD + folder + "_cropped"
 csvpath = os.path.join(path, folder) + '.csv'
 
-s = 0
+s = 0 # check whether it's 1st time to use this script for a certain folder
 k = 0
 cnt = 0
-pcnt = 1
-tpcnt = 1
+# 'You have counted {tpcnt} people in this directory. This time, you have counted {pcnt} people. Press E to stop.'
+pcnt = 1 #  refer above
+tpcnt = 1 # refer above
 new_frame = 0
 
 if not os.path.exists(path):
 	os.makedirs(path)
 	s = 1
-	
+
 print("INSTRUCTION")
 print("  C   -- count person")
 print("  E   -- stop annotationg")
@@ -35,13 +36,11 @@ for fname in files:
 	img = cv2.imread(fname)	
 	x=1
 	y=1
-	
+
 	if s == 0: #continue
 		right = os.path.basename(fname[-10:-4])
 		lastrow = sum(1 for i in open(csvpath)) # http://hk29.hatenablog.jp/entry/2018/05/01/152759
-		#lastrow_sen = linecache.getline(os.path.join(path, folder) + '.csv', lastrow)
-		last = glob.glob(path + "/LAST_*")
-		last = ','.join(last)
+		last = ','.join(glob.glob(path + "/LAST_*"))
 		left = os.path.basename(last[-18:-12])
 
 		if new_frame == 0:
@@ -49,12 +48,9 @@ for fname in files:
 				continue;
 
 		new_frame = 0
-
-
 		ent = 0
 		if k == 0: #start from previous
 			lastrow = sum(1 for i in open(csvpath)) # http://hk29.hatenablog.jp/entry/2018/05/01/152759
-			#lastrow_sen = linecache.getline(os.path.join(path, folder) + '.csv', lastrow)
 			last = ','.join(glob.glob(path + "/LAST_*"))
 			lastimg = cv2.imread(last)
 			y = int(last[-5])
@@ -73,18 +69,18 @@ for fname in files:
 	
 	while y < img.shape[0]/300.0 + 1:
 		while x < img.shape[1]/300.0 + 1:
-							
+			
 			cropped = img[(y-1)*300:y*300, (x-1)*300:x*300]
 			cv2.imwrite(os.path.join(path, os.path.basename(fname) + "_" + str(x) + "_" + str(y) + ".jpg"), cropped)
 			window_name = os.path.join(path, os.path.basename(fname) + "_" + str(x) + "_" + str(y) + ".jpg")
-			if s==0 and cnt==0:  #only for first image when you start from continue
+
+			if s==0 and cnt==0:  #only for the 1st image when you start from continue
 				cnt=1
 				last = ','.join(glob.glob(path + "/LAST_*"))
 				resized_cropped = cv2.resize(cv2.imread(last), (900, 900))
 				resized_previous = cv2.imread(path + "/PREVIOUS.jpg")
 				os.remove(last)
-			
-			else:	
+			else:
 				resized_cropped = cv2.resize(cropped, (900, 900))
 				
 			if s==1:
@@ -132,15 +128,15 @@ for fname in files:
 						lastrow = sum(1 for i in open(csvpath))
 						ent = 1
 				
-				## go next image by enter key	
-				elif k==13:
+				## go next image
+				elif k==13: # input 'Enter'
 					cv2.imwrite(os.path.join(path, os.path.basename(fname) + "_" + str(x) + "_" + str(y) + "annotated.jpg"), resized_cropped)
 					resized_previous = copy.copy(resized_cropped)
 					ent = 1
 					break;
 					
-				## clear screen by esc
-				elif k==27:
+				## clear screen
+				elif k==27:# intput 'esc'
 					resized_cropped = cv2.resize(cropped, (900, 900))
 					cv2.imshow(window_name, resized_cropped)
 					df = pd.read_csv(csvpath, index_col=0)
@@ -155,7 +151,7 @@ for fname in files:
 					cv2.imwrite(path + "/PREVIOUS.jpg", resized_previous)
 					exit()
 					
-			cv2.destroyAllWindows()		
+			cv2.destroyAllWindows()
 			x+=1
 			
 		x=1
