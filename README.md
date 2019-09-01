@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ``` 
 
 ## How to use
-### converting videos to images
+### converting videos into images
 If you won't use video as input, you can skip this section.  
 Most of the scripts for this section are owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
 
