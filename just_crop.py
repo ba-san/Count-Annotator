@@ -3,22 +3,16 @@ import cv2
 import glob
 
 folder = "images" #input images in this directory
-
-PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
-
+PWD = os.getcwd() + '/'
 files=glob.glob(PWD + folder + "/*")
-
 path = PWD + folder + "_cropped"
-
 
 if not os.path.exists(path):
 	os.makedirs(path)
 
-
 for fname in files:
 	print(fname)
 	img = cv2.imread(fname, cv2.IMREAD_COLOR)
-
 	x=1
 	y=1
 	
@@ -29,4 +23,3 @@ for fname in files:
 			x+=1
 		x=1
 		y+=1
-			
