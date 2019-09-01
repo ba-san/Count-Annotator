@@ -27,12 +27,12 @@ Most of the scripts in this section are owe to [this page](https://note.nkmk.me/
 1. Go to the "Count-Annotator" directory.  
 
 2. setting path and frame of video2img.py  
-(you can use default setting for demo.)  
+(you can use default setting for demo. the demo video is gotten from [this page](https://www.pexels.com/video/time-lapse-video-of-people-crossing-the-street-853960/))  
 
 ``` 
-save_frame_range('./videos/pocari_cm.mp4', #input video
+save_frame_range('./videos/shibuya.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
-                 './images/', 'pocari_cm') #output directory and output images' prefix
+                 './images/', 'shibuya') #output directory and output images' prefix
 ``` 
 3. run by ``` python video2img.py```  
 
