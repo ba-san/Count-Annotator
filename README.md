@@ -61,5 +61,7 @@ move mouse for dragging a pointer and push keys below.
  Esc  -- clear image and start it again  
 Enter -- go to next image  
 
+**Note**: just_crop.py is a script just to crop images, without annotation.  
+
 ## Output
 You can get both a csv file and annotated images in 'OO_cropped' directory as shown on the top of this page.  
