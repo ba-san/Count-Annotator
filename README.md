@@ -38,11 +38,9 @@ save_frame_range('./videos/pocari_cm.mp4', #input video
 ### annotation
 1. Go to the "Count-Annotator" directory.  
 
-2. setting path of annotation.py
+2. setting annotating directory  
 ``` 
 folder = "images" #input images in this directory
-
-PWD = "C:/Users/member/Documents/annotation_set/" #set current directory
 ``` 
 3. You can also change the size of cropped images here.  
 ``` 
