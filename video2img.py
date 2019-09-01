@@ -28,9 +28,9 @@ save_frame_range('./videos/pocari_cm.mp4', #input video
                  0, 10000000000, 100, # start, end, frame
                  './images/', 'pocari_cm') #output directory and output images' prefix
 
-# process multiple videos
+## process multiple videos
 # files=glob.glob("/PATH/TO/VIDEO/FOLDER" + "/*")
-
+#
 # for fname in files:
 # 	vname = os.path.basename(fname)
 #	  prefix = vname.split(".")
