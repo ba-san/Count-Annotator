@@ -10,7 +10,7 @@ This can be worked on both Linux and Windows.
 
 ## Set up
 It is recommended to use Python3.7.  
-1.download this repository.  
+1.download the repo.  
 ``` 
 git clone https://github.com/ba-san/Count-Annotator.git  
 ``` 
@@ -22,11 +22,12 @@ pip install -r requirements.txt
 ## How to use
 ### making videos to images
 If you won't use video as input, you can skip here.  
-Most of this script is owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
+Most of the scripts in this section are owe to [this page](https://note.nkmk.me/python-opencv-video-to-still-image/).  
 
 1. Go to the "Count-Annotator" directory.  
 
 2. setting path and frame of video2img.py  
+(you can use default setting for demo.)  
 
 ``` 
 save_frame_range('./videos/pocari_cm.mp4', #input video
@@ -38,21 +39,21 @@ save_frame_range('./videos/pocari_cm.mp4', #input video
 ### annotation
 1. Go to the "Count-Annotator" directory.  
 
-2. setting annotating directory  
+2. setting up an annotating directory  
 ``` 
 folder = "images" #input images in this directory
 ``` 
-3. You can also change the size of cropped images here.  
+3. You can set the size of cropped images here.  
 ``` 
 	while y < img.shape[0]/300.0:
 		while x < img.shape[1]/300.0:
 							
 			cropped = img[(y-1)*300:y*300, (x-1)*300:x*300]
 ``` 
-In this case, cropped image size is 300px x 300px.  
+In this case, cropped image size will be 300px x 300px.  
 
 4.run by ``` python annotation.py```  
-pushing keys below. 
+move mouse for dragging a pointer and push keys below.  
 
   C   -- count object (moving your mouse on top of object first)  
   E   -- stop annotating. **DO NOT END IT BY TYPING 'Ctrl + C' OR ANY OTHER WAYS!!**  
@@ -61,4 +62,4 @@ pushing keys below.
 Enter -- go to next image  
 
 ## Output
-You can get both csv file and annotated images as shown on the top of this page.  
+You can get both a csv file and annotated images in 'OO_cropped' directory as shown on the top of this page.  
